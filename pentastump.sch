@@ -1,0 +1,318 @@
+EESchema Schematic File Version 4
+LIBS:pentastump-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 5ACF87AD
+P 3100 2250
+F 0 "U2" H 3100 2492 50  0000 C CNN
+F 1 "L7805" H 3100 2401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3125 2100 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3100 2200 50  0001 C CNN
+	1    3100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5ACF885D
+P 3600 2100
+F 0 "#PWR0101" H 3600 1950 50  0001 C CNN
+F 1 "+5V" H 3615 2273 50  0000 C CNN
+F 2 "" H 3600 2100 50  0001 C CNN
+F 3 "" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2250 3450 2250
+Wire Wire Line
+	3600 2250 3600 2100
+$Comp
+L Device:C C2
+U 1 1 5ACF8A14
+P 3550 2450
+F 0 "C2" H 3665 2496 50  0000 L CNN
+F 1 "100nF" H 3665 2405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3588 2300 50  0001 C CNN
+F 3 "~" H 3550 2450 50  0001 C CNN
+	1    3550 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5ACF8A63
+P 2600 2450
+F 0 "C1" H 2715 2496 50  0000 L CNN
+F 1 "100nF" H 2715 2405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2638 2300 50  0001 C CNN
+F 3 "~" H 2600 2450 50  0001 C CNN
+	1    2600 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2300 3550 2250
+Connection ~ 3550 2250
+Wire Wire Line
+	3550 2250 3600 2250
+Wire Wire Line
+	2800 2250 2750 2250
+Wire Wire Line
+	2600 2250 2600 2300
+$Comp
+L power:GND #PWR0103
+U 1 1 5ACF8F96
+P 3100 2600
+F 0 "#PWR0103" H 3100 2350 50  0001 C CNN
+F 1 "GND" H 3105 2427 50  0000 C CNN
+F 2 "" H 3100 2600 50  0001 C CNN
+F 3 "" H 3100 2600 50  0001 C CNN
+	1    3100 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2600 3100 2550
+Wire Wire Line
+	3550 2600 3100 2600
+Connection ~ 3100 2600
+Wire Wire Line
+	3100 2600 2600 2600
+$Comp
+L pentalib:USB_A USB1
+U 1 1 5ACF973C
+P 2800 4650
+F 0 "USB1" H 3128 4751 50  0000 L CNN
+F 1 "USB_A" H 3128 4660 50  0000 L CNN
+F 2 "pentalib:USB_A_PCB" H 2800 4550 50  0001 C CNN
+F 3 "" H 2800 4550 50  0001 C CNN
+	1    2800 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5ACFA5CE
+P 3550 4550
+F 0 "R1" V 3343 4550 50  0000 C CNN
+F 1 "R" V 3434 4550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3480 4550 50  0001 C CNN
+F 3 "~" H 3550 4550 50  0001 C CNN
+	1    3550 4550
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5ACFA749
+P 3550 4650
+F 0 "R2" V 3800 4650 50  0000 C CNN
+F 1 "R" V 3700 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3480 4650 50  0001 C CNN
+F 3 "~" H 3550 4650 50  0001 C CNN
+	1    3550 4650
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3400 4650 3000 4650
+Wire Wire Line
+	3400 4550 3300 4550
+Wire Wire Line
+	2800 5000 2800 4750
+$Comp
+L Device:D_Schottky D1
+U 1 1 5ACFBDB2
+P 3000 4850
+F 0 "D1" V 2954 4929 50  0000 L CNN
+F 1 "D_Schottky" H 3250 4850 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 3000 4850 50  0001 C CNN
+F 3 "~" H 3000 4850 50  0001 C CNN
+	1    3000 4850
+	0    -1   1    0   
+$EndComp
+Connection ~ 3000 5000
+Wire Wire Line
+	3000 5000 2800 5000
+$Comp
+L Device:D_Schottky D2
+U 1 1 5ACFBE29
+P 3300 4850
+F 0 "D2" V 3254 4929 50  0000 L CNN
+F 1 "D_Schottky" H 3550 4850 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 3300 4850 50  0001 C CNN
+F 3 "~" H 3300 4850 50  0001 C CNN
+	1    3300 4850
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3300 5000 3000 5000
+Wire Wire Line
+	3000 4700 3000 4650
+Connection ~ 3000 4650
+Wire Wire Line
+	3000 4650 2800 4650
+Wire Wire Line
+	3300 4700 3300 4550
+Connection ~ 3300 4550
+Wire Wire Line
+	3300 4550 2800 4550
+$Comp
+L power:+5V #PWR0104
+U 1 1 5ACFC1DC
+P 2800 4450
+F 0 "#PWR0104" H 2800 4300 50  0001 C CNN
+F 1 "+5V" H 2815 4623 50  0000 C CNN
+F 2 "" H 2800 4450 50  0001 C CNN
+F 3 "" H 2800 4450 50  0001 C CNN
+	1    2800 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5ACFCA5D
+P 2800 5000
+F 0 "#PWR0105" H 2800 4750 50  0001 C CNN
+F 1 "GND" H 2805 4827 50  0000 C CNN
+F 2 "" H 2800 5000 50  0001 C CNN
+F 3 "" H 2800 5000 50  0001 C CNN
+	1    2800 5000
+	-1   0    0    -1  
+$EndComp
+Connection ~ 2800 5000
+$Comp
+L pentalib:ATtiny85-20SU U1
+U 1 1 5ACFE3A5
+P 3000 3750
+F 0 "U1" H 3100 4415 50  0000 C CNN
+F 1 "ATtiny85-20SU" H 3100 4324 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 3000 4200 50  0001 C CNN
+F 3 "" H 3000 4200 50  0001 C CNN
+	1    3000 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 4550 2    50   Input ~ 0
+USB-
+Text GLabel 3700 4650 2    50   Input ~ 0
+USB+
+Text GLabel 2700 3550 0    50   Input ~ 0
+USB+
+Text GLabel 2700 3650 0    50   Input ~ 0
+USB-
+$Comp
+L power:GND #PWR0106
+U 1 1 5AD01DD2
+P 2700 3750
+F 0 "#PWR0106" H 2700 3500 50  0001 C CNN
+F 1 "GND" H 2705 3577 50  0000 C CNN
+F 2 "" H 2700 3750 50  0001 C CNN
+F 3 "" H 2700 3750 50  0001 C CNN
+	1    2700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 5AD01E16
+P 3500 3300
+F 0 "#PWR0107" H 3500 3150 50  0001 C CNN
+F 1 "+5V" H 3515 3473 50  0000 C CNN
+F 2 "" H 3500 3300 50  0001 C CNN
+F 3 "" H 3500 3300 50  0001 C CNN
+	1    3500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5AD02067
+P 4500 3450
+F 0 "J1" H 4580 3442 50  0000 L CNN
+F 1 "Conn_01x06" H 4580 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 4500 3450 50  0001 C CNN
+F 3 "~" H 4500 3450 50  0001 C CNN
+	1    4500 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 3250 0    50   Input ~ 0
+PB0
+Text GLabel 3500 3750 2    50   Input ~ 0
+PB0
+Text GLabel 3500 3650 2    50   Input ~ 0
+PB1
+Text GLabel 3500 3550 2    50   Input ~ 0
+PB2
+Text GLabel 2700 3450 0    50   Input ~ 0
+PB5
+Text GLabel 4300 3350 0    50   Input ~ 0
+PB1
+Text GLabel 4300 3450 0    50   Input ~ 0
+PB2
+Text GLabel 4300 3650 0    50   Input ~ 0
+USB+
+Text GLabel 4300 3550 0    50   Input ~ 0
+USB-
+Text GLabel 4300 3750 0    50   Input ~ 0
+PB5
+Wire Wire Line
+	3500 3450 3500 3350
+$Comp
+L Device:C C3
+U 1 1 5AD025C5
+P 3650 3350
+F 0 "C3" V 3398 3350 50  0000 C CNN
+F 1 "100nF" V 3489 3350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3688 3200 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	0    1    1    0   
+$EndComp
+Connection ~ 3500 3350
+Wire Wire Line
+	3500 3350 3500 3300
+$Comp
+L power:VCC #PWR0102
+U 1 1 5AD0427C
+P 2600 2250
+F 0 "#PWR0102" H 2600 2100 50  0001 C CNN
+F 1 "VCC" H 2617 2423 50  0000 C CNN
+F 2 "" H 2600 2250 50  0001 C CNN
+F 3 "" H 2600 2250 50  0001 C CNN
+	1    2600 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2600 2250
+Text Notes 2700 2100 0    50   ~ 0
+>7,5V
+$Comp
+L Device:D_Schottky D3
+U 1 1 5ACFB23F
+P 3100 1900
+F 0 "D3" H 3100 2116 50  0000 C CNN
+F 1 "D_Schottky" H 3100 2025 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 3100 1900 50  0001 C CNN
+F 3 "~" H 3100 1900 50  0001 C CNN
+	1    3100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2250 3450 1900
+Wire Wire Line
+	3450 1900 3250 1900
+Connection ~ 3450 2250
+Wire Wire Line
+	3450 2250 3550 2250
+Wire Wire Line
+	2950 1900 2750 1900
+Wire Wire Line
+	2750 1900 2750 2250
+Connection ~ 2750 2250
+Wire Wire Line
+	2750 2250 2600 2250
+$EndSCHEMATC
